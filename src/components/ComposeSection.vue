@@ -1,5 +1,7 @@
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+
+export default defineComponent({
   props: {
     value: {
       type: String,
@@ -16,7 +18,7 @@ export default {
       this.$emit("submit", this.message);
     },
   },
-};
+});
 </script>
 
 <template>

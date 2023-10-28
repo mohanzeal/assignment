@@ -1,8 +1,9 @@
 <script lang="ts">
+import { defineComponent } from "vue";
 import ComposeSection from "./ComposeSection.vue";
 import ConversationArea from "./ConversationArea.vue";
 
-export default {
+export default defineComponent({
   components: {
     ConversationArea,
     ComposeSection,
@@ -29,7 +30,7 @@ export default {
     this.$store.dispatch("getCurrentUser");
     this.$store.dispatch("getConversations");
   },
-};
+});
 </script>
 
 <template>

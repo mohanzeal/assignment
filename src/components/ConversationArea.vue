@@ -1,7 +1,8 @@
 <script lang="ts">
+import { defineComponent } from "vue";
 import MessageEntry from "./MessageEntry.vue";
 
-export default {
+export default defineComponent({
   components: {
     MessageEntry,
   },
@@ -25,7 +26,7 @@ export default {
       observer.observe(scrollingElement, config);
     },
   },
-};
+});
 </script>
 
 <template>

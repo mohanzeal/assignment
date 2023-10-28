@@ -1,5 +1,7 @@
 <script lang="ts">
-export default {
+import { defineComponent } from "vue";
+
+export default defineComponent({
   props: {
     entry: {
       type: Object,
@@ -16,7 +18,7 @@ export default {
         "Lorem, <br /> ipsum dolor sit amet consectetur adipisicing elit. Dolor sit dolorem tempore quasi voluptate atque impedit incidunt ratione? Perferendis porro aperiam quod, recusandae voluptates itaque ipsa dolorum expedita minima. Libero.",
     };
   },
-};
+});
 </script>
 
 <template>
