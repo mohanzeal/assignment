@@ -42,6 +42,7 @@ export default defineComponent({
 
 <style>
 .chat-box-container {
+  margin: 0 auto;
   max-width: 500px;
   max-height: 400px;
 }
