@@ -16,6 +16,7 @@ export default defineComponent({
   methods: {
     addConversion() {
       this.$emit("submit", this.message);
+      this.message = "";
     },
   },
 });
@@ -26,6 +27,7 @@ export default defineComponent({
     <textarea
       placeholder="type your message here..."
       v-model="message"
+      @keyup.enter="addConversion"
     ></textarea>
     <button @click="addConversion">
       <img src="icons/send.png" />
