@@ -24,6 +24,7 @@ export default defineComponent({
       };
 
       this.$store.commit("addConversation", payload);
+      (this.$refs.conversationArea as any).scrollToBottom();
     },
   },
   mounted() {
@@ -35,7 +36,7 @@ export default defineComponent({
 
 <template>
   <div class="chat-box-container">
-    <ConversationArea />
+    <ConversationArea ref="conversationArea" />
     <ComposeSection v-model="currentMessage" @submit="sendReply" />
   </div>
 </template>

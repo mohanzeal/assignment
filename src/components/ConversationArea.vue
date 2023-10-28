@@ -6,24 +6,14 @@ export default defineComponent({
   components: {
     MessageEntry,
   },
+  mounted() {
+    setTimeout(() => {
+      this.scrollToBottom();
+    }, 510);
+  },
   methods: {
     scrollToBottom() {
-      const scrollingElement = document.getElementById(
-        "scroller"
-      ) as HTMLElement;
-
-      const config = { childList: true };
-
-      const callback = function (mutationsList: any[]) {
-        for (let mutation of mutationsList) {
-          if (mutation.type === "childList") {
-            window.scrollTo(0, document.body.scrollHeight);
-          }
-        }
-      };
-
-      const observer = new MutationObserver(callback);
-      observer.observe(scrollingElement, config);
+      (document?.getElementById("anchor") as any).scrollIntoView(true);
     },
   },
 });
